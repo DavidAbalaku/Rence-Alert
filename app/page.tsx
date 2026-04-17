@@ -9,17 +9,17 @@ export default function Home() {
 
   useEffect(() => {
     // Load library engine
-    if (!document.querySelector('script[src="/rence-alert.js"]')) {
+    if (!document.querySelector('script[src="./rence-alert.js"]')) {
       const script = document.createElement("script");
-      script.src = "/rence-alert.js";
+      script.src = "./rence-alert.js";
       script.async = true;
       document.body.appendChild(script);
     }
 
-    if (!document.querySelector('link[href="/rence-alert.css"]')) {
+    if (!document.querySelector('link[href="./rence-alert.css"]')) {
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = "/rence-alert.css";
+      link.href = "./rence-alert.css";
       document.head.appendChild(link);
     }
   }, []);
