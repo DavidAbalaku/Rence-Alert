@@ -2,6 +2,8 @@
 
 A beautiful, responsive, customizable, and accessible replacement for JavaScript's standard popup boxes. Designed with strict adherence to **Material Design 3**, Rence Alert elevates the styling of standard windows alerts with beautiful enter/exit animations, promise-based confirm/cancel features, and modern Toasts.
 
+[**🌐 Live Documentation & Demo**](https://davidabalaku.github.io/Rence-Alert/)
+
 ![Rence Alert Poster](https://raw.githubusercontent.com/DavidAbalaku/Rence-Alert/main/public/banner.png)
 
 ## Features
