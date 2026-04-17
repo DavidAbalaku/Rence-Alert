@@ -184,7 +184,17 @@ export default function Home() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">Or grab from jsDelivr CDN</h3>
-            <CodeBlock id="inst2" code={`<!-- CSS -->\n<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yourname/rence-alert@main/dist/rence-alert.min.css">\n\n<!-- JavaScript -->\n<script src="https://cdn.jsdelivr.net/gh/yourname/rence-alert@main/dist/rence-alert.min.js"></script>`} />
+            <p className="text-sm text-gray-600 mb-2">Note: For direct GitHub CDN, your repository must be set to <b>Public</b>. Alternatively, use the NPM CDN once published.</p>
+            <div className="space-y-4">
+              <div>
+                <p className="text-xs font-bold text-gray-400 uppercase">Via GitHub (Requires Public Repo)</p>
+                <CodeBlock id="inst-gh" code={`<!-- CSS -->\n<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DavidAbalaku/Rence-Alert@main/public/rence-alert.css">\n\n<!-- JavaScript -->\n<script src="https://cdn.jsdelivr.net/gh/DavidAbalaku/Rence-Alert@main/public/rence-alert.js"></script>`} />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-gray-400 uppercase">Via NPM (Recommended)</p>
+                <CodeBlock id="inst-npm-cdn" code={`<!-- CSS -->\n<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rence-alert@latest/public/rence-alert.css">\n\n<!-- JavaScript -->\n<script src="https://cdn.jsdelivr.net/npm/rence-alert@latest/public/rence-alert.js"></script>`} />
+              </div>
+            </div>
           </div>
         </div>
         

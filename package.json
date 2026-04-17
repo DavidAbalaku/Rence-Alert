@@ -1,7 +1,17 @@
 {
-  "name": "rence-alert-website",
+  "name": "rence-alert",
   "version": "1.0.0",
-  "private": true,
+  "description": "A beautiful, responsive, customizable Material Design 3 alert library.",
+  "main": "public/rence-alert.js",
+  "style": "public/rence-alert.css",
+  "files": [
+    "public/rence-alert.js",
+    "public/rence-alert.css",
+    "README.md"
+  ],
+  "author": "David Abalaku",
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
