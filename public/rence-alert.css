@@ -11,7 +11,7 @@
 .rence-container {
   position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
   background-color: rgba(0, 0, 0, 0.5); z-index: 9999;
-  backdrop-filter: blur(2px); opacity: 0; transition: opacity 0.3s ease;
+  backdrop-filter: blur(2px); opacity: 0; transition: opacity 0.2s ease;
   font-family: 'Roboto', 'Inter', system-ui, sans-serif;
 }
 .rence-visible { opacity: 1; }
@@ -23,7 +23,24 @@
   width: 90%; max-width: 420px; padding: 36px 24px 28px;
   text-align: center;
   transform: scale(0.85) translateY(20px);
-  transition: all 0.4s cubic-bezier(0.2, 1.2, 0.4, 1.1); /* Authentic M3 Spring bounce */
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.4, 1);
+  margin: 16px; /* Added margins for mobile edges */
+}
+@media (max-width: 480px) {
+  .rence-modal {
+    width: calc(100% - 32px);
+    padding: 32px 16px 24px;
+    border-radius: 24px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .rence-footer {
+    flex-direction: column-reverse; /* Stack buttons on mobile */
+    gap: 8px;
+  }
+  .rence-button {
+    width: 100%; /* Full width buttons for easier tapping */
+  }
 }
 .rence-visible .rence-modal { transform: scale(1) translateY(0); }
 

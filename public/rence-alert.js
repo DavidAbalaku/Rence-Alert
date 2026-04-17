@@ -58,7 +58,7 @@ const RenceAlert = (() => {
           setTimeout(() => {
             if (document.body.contains(container)) document.body.removeChild(container);
             resolve({ isConfirmed, isDismissed: !isConfirmed });
-          }, 300);
+          }, 200);
         };
 
         container.querySelector('.rence-btn-confirm').onclick = () => closeAlert(true);

@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { RenceAlert } from "@/lib/rence-alert";
-import { Check, Copy } from "lucide-react";
+import { Check, Copy, Menu, X } from "lucide-react";
 
 export default function Home() {
   const [copiedStates, setCopiedStates] = useState<{ [key: string]: boolean }>({});
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     // Load library engine
@@ -47,14 +48,27 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-[#333] font-sans selection:bg-[#6750A4] selection:text-white flex flex-col md:flex-row">
       
+      {/* Mobile Header */}
+      <div className="md:hidden flex items-center justify-between p-4 bg-white border-b sticky top-0 z-50">
+        <h2 className="text-xl font-black text-[#6750A4]">Rence Alert</h2>
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-[#6750A4]">
+          {isMenuOpen ? <X /> : <Menu />}
+        </button>
+      </div>
+
       {/* Sidebar Navigation */}
-      <aside className="md:w-64 md:fixed md:top-0 md:bottom-0 md:left-0 bg-[#f8f9fa] border-r border-gray-200 p-6 md:pt-16 hidden md:block overflow-y-auto">
-        <h2 className="text-2xl font-black text-[#6750A4] mb-8 tracking-tight">Rence Alert</h2>
-        <nav className="flex flex-col gap-4 text-[15px] font-medium text-gray-600">
-          <a href="#examples" className="hover:text-[#6750A4] transition-colors">Examples</a>
-          <a href="#download" className="hover:text-[#6750A4] transition-colors">Download & Install</a>
-          <a href="#usage" className="hover:text-[#6750A4] transition-colors">Usage</a>
-          <a href="#configuration" className="hover:text-[#6750A4] transition-colors">Configuration Params</a>
+      <aside className={`
+        md:w-64 md:fixed md:top-0 md:bottom-0 md:left-0 bg-[#f8f9fa] border-r border-gray-200 p-6 md:pt-16 
+        fixed top-[61px] bottom-0 left-0 right-0 z-40 transition-transform duration-300 ease-in-out
+        ${isMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
+        md:block overflow-y-auto
+      `}>
+        <h2 className="text-2xl font-black text-[#6750A4] mb-8 tracking-tight hidden md:block">Rence Alert</h2>
+        <nav className="flex flex-col gap-6 md:gap-4 text-[17px] md:text-[15px] font-medium text-gray-600">
+          <a href="#examples" onClick={() => setIsMenuOpen(false)} className="hover:text-[#6750A4] transition-colors">Examples</a>
+          <a href="#download" onClick={() => setIsMenuOpen(false)} className="hover:text-[#6750A4] transition-colors">Download & Install</a>
+          <a href="#usage" onClick={() => setIsMenuOpen(false)} className="hover:text-[#6750A4] transition-colors">Usage</a>
+          <a href="#configuration" onClick={() => setIsMenuOpen(false)} className="hover:text-[#6750A4] transition-colors">Configuration Params</a>
         </nav>
       </aside>
 
