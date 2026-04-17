@@ -151,7 +151,31 @@ export default function Home() {
             />
           </div>
 
-          {/* Example 5: Toast Notifications */}
+          {/* Example 5: Custom Colors & Width */}
+          <div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Advanced Customization (Colors, Width, BG)</h3>
+            <p className="text-gray-600 mb-4 text-sm">You can resize the card, change button colors, or even update the icon colors dynamically.</p>
+            <button 
+              onClick={() => RenceAlert.fire({
+                title: 'Custom Style!',
+                text: 'This alert has a custom width and colors.',
+                icon: 'success',
+                width: '600px',
+                confirmButtonColor: '#00BFA5',
+                iconColor: '#00BFA5',
+                background: '#f0fdfa'
+              })}
+              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-teal-50 font-medium text-teal-600 transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+            >
+              Try me!
+            </button>
+            <CodeBlock 
+              id="ex5" 
+              code={`RenceAlert.fire({\n  title: 'Custom Style!',\n  text: 'Custom width and colors.',\n  icon: 'success',\n  width: '600px',\n  confirmButtonColor: '#00BFA5',\n  iconColor: '#00BFA5',\n  background: '#f0fdfa'\n});`} 
+            />
+          </div>
+
+          {/* Example 6: Toast Notifications */}
           <div>
             <h3 className="text-xl font-semibold mb-3 text-gray-800">Non-blocking Toast Notifications (Material 3 Snackbar)</h3>
             <div className="flex gap-4">

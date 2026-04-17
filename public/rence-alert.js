@@ -16,9 +16,15 @@ const RenceAlert = (() => {
         title: '',
         text: '',
         icon: 'info',
+        width: '420px',
+        background: '#ffffff',
+        iconColor: '',
+        confirmButtonColor: '#6750A4',
+        cancelButtonColor: '#f1f3f5',
         confirmButtonText: 'OK',
         showCancelButton: false,
         cancelButtonText: 'Cancel',
+        customClass: '',
         ...options
       };
     }
@@ -26,16 +32,18 @@ const RenceAlert = (() => {
     fire() {
       return new Promise((resolve) => {
         const container = document.createElement('div');
-        container.className = 'rence-container';
+        container.className = `rence-container ${this.options.customClass}`;
         
         container.innerHTML = `
-          <div class="rence-modal">
-            <div class="rence-icon rence-icon-${this.options.icon}">${icons[this.options.icon]}</div>
+          <div class="rence-modal" style="width: ${this.options.width}; background: ${this.options.background};">
+            <div class="rence-icon rence-icon-${this.options.icon}" style="${this.options.iconColor ? `color: ${this.options.iconColor}; border-color: ${this.options.iconColor}33; background: ${this.options.iconColor}0D;` : ''}">
+              ${icons[this.options.icon]}
+            </div>
             <h2 class="rence-title">${this.options.title}</h2>
             <p class="rence-text">${this.options.text}</p>
             <div class="rence-footer">
-              ${this.options.showCancelButton ? `<button class="rence-button rence-btn-cancel">${this.options.cancelButtonText}</button>` : ''}
-              <button class="rence-button rence-btn-confirm">${this.options.confirmButtonText}</button>
+              ${this.options.showCancelButton ? `<button class="rence-button rence-btn-cancel" style="background-color: ${this.options.cancelButtonColor};">${this.options.cancelButtonText}</button>` : ''}
+              <button class="rence-button rence-btn-confirm" style="background-color: ${this.options.confirmButtonColor};">${this.options.confirmButtonText}</button>
             </div>
           </div>
         `;
