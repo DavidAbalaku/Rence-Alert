@@ -13,19 +13,20 @@ A beautiful, responsive, customizable, and accessible replacement for JavaScript
 
 ## Installation
 
-### Method 1: jsDelivr CDN
-Use the jsDelivr CDN to automatically sync directly to raw GitHub releases for vanilla HTML projects.
+### Method 1: jsDelivr CDN (Highly Recommended)
+Use the NPM-based CDN to automatically get the latest version without hosting it yourself.
 
 ```html
 <!-- Put this in the <head> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DavidAbalaku/Rence-Alert@main/public/rence-alert.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rence-alert@latest/public/rence-alert.css">
 
 <!-- Put this anywhere before the closing </body> tag -->
-<script src="https://cdn.jsdelivr.net/gh/DavidAbalaku/Rence-Alert@main/public/rence-alert.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/rence-alert@latest/public/rence-alert.js"></script>
 ```
 
 ### Method 2: NPM 
-*(If published to NPM registry later)*
+Excellent for modern project builds (React, Next.js, etc.)
+
 ```bash
 npm install rence-alert
 ```
@@ -44,6 +45,8 @@ npm install rence-alert
 ## Advanced Usage (React / Next.js)
 Because RenceAlert mounts standard promises, you can use it confidently in React handler arrays:
 ```tsx
+import { RenceAlert } from 'rence-alert';
+
 export default function DeleteButton() {
   const handleDelete = () => {
     RenceAlert.fire({

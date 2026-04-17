@@ -187,12 +187,12 @@ export default function Home() {
             <p className="text-sm text-gray-600 mb-2">Note: For direct GitHub CDN, your repository must be set to <b>Public</b>. Alternatively, use the NPM CDN once published.</p>
             <div className="space-y-4">
               <div>
-                <p className="text-xs font-bold text-gray-400 uppercase">Via GitHub (Requires Public Repo)</p>
-                <CodeBlock id="inst-gh" code={`<!-- CSS -->\n<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DavidAbalaku/Rence-Alert@main/public/rence-alert.css">\n\n<!-- JavaScript -->\n<script src="https://cdn.jsdelivr.net/gh/DavidAbalaku/Rence-Alert@main/public/rence-alert.js"></script>`} />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-gray-400 uppercase">Via NPM (Recommended)</p>
+                <p className="text-xs font-bold text-gray-400 uppercase">Via NPM (Highly Recommended)</p>
                 <CodeBlock id="inst-npm-cdn" code={`<!-- CSS -->\n<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rence-alert@latest/public/rence-alert.css">\n\n<!-- JavaScript -->\n<script src="https://cdn.jsdelivr.net/npm/rence-alert@latest/public/rence-alert.js"></script>`} />
+              </div>
+              <div className="pt-4 border-t border-gray-50 mt-4 opacity-60">
+                <p className="text-xs font-bold text-gray-400 uppercase">Via GitHub (Legacy)</p>
+                <CodeBlock id="inst-gh" code={`<!-- CSS -->\n<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DavidAbalaku/Rence-Alert@main/public/rence-alert.css">\n\n<!-- JavaScript -->\n<script src="https://cdn.jsdelivr.net/gh/DavidAbalaku/Rence-Alert@main/public/rence-alert.js"></script>`} />
               </div>
             </div>
           </div>
