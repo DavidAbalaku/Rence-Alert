@@ -1,12 +1,13 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  // Ensure the base path matches the GitHub Repo name for Pages
-  basePath: '/Rence-Alert',
-  assetPrefix: '/Rence-Alert',
+  // Only use the base path in production (GitHub Pages)
+  basePath: isProd ? '/Rence-Alert' : '',
 };
 
 export default nextConfig;

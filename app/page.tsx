@@ -222,7 +222,7 @@ export default function Home() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">Or grab from jsDelivr CDN</h3>
-            <p className="text-sm text-gray-600 mb-2">Note: For direct GitHub CDN, your repository must be set to <b>Public</b>. Alternatively, use the NPM CDN once published.</p>
+            <p className="text-sm text-gray-600 mb-2">Use the following CDN links to include Rence Alert in your project instantly.</p>
             <div className="space-y-4">
               <div>
                 <p className="text-xs font-bold text-gray-400 uppercase">Via NPM (Highly Recommended)</p>
