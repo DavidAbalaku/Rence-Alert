@@ -28,9 +28,21 @@ export const RenceAlert = {
     }
   },
   
+  question: (title: string, text: string) => {
+    if (typeof window !== 'undefined' && (window as any).RenceAlert) {
+      (window as any).RenceAlert.question(title, text);
+    }
+  },
+  
   toast: (title: string, text: string, type: string = 'info') => {
     if (typeof window !== 'undefined' && (window as any).RenceAlert) {
       (window as any).RenceAlert.toast(title, text, type);
+    }
+  },
+
+  snackbar: (text: string, actionText: string = 'OK') => {
+    if (typeof window !== 'undefined' && (window as any).RenceAlert) {
+      (window as any).RenceAlert.snackbar(text, actionText);
     }
   },
   

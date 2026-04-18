@@ -211,6 +211,36 @@ export default function Home() {
               code={`// Fire a simple Material Design toast on the top right\nRenceAlert.toast("Signed In", "Signed in successfully", "success");\nRenceAlert.toast("Network Error", "Unable to connect", "error");`} 
             />
           </div>
+
+          {/* Example 7: Snackbar style (Bottom) */}
+          <div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Snackbar style (Bottom)</h3>
+            <button 
+              onClick={() => RenceAlert.snackbar("Action successful", "RETRY")}
+              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-[#313033] text-[#F4EFF4] hover:bg-[#444] font-medium transition-all active:scale-95 px-8"
+            >
+              Try Snackbar
+            </button>
+            <CodeBlock 
+              id="ex7" 
+              code={`// Fire a premium Material Design snackbar\nRenceAlert.snackbar("Action successful", "RETRY");`} 
+            />
+          </div>
+
+          {/* Example 8: Question Dialog */}
+          <div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Question / Confirmation Dialog</h3>
+            <button 
+              onClick={() => RenceAlert.question("Are you sure?", "This will permanently delete the item.")}
+              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#6750A4] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+            >
+              Try Question
+            </button>
+            <CodeBlock 
+              id="ex8" 
+              code={`RenceAlert.question(\n  "Are you sure?", \n  "This will permanently delete the item."\n);`} 
+            />
+          </div>
         </div>
 
         {/* Setup instructions */}
