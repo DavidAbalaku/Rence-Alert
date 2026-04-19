@@ -34,9 +34,9 @@ export const RenceAlert = {
     }
   },
   
-  toast: (title: string, text: string, type: string = 'info') => {
+  toast: (opts: any, text?: string, type: string = 'info') => {
     if (typeof window !== 'undefined' && (window as any).RenceAlert) {
-      (window as any).RenceAlert.toast(title, text, type);
+      (window as any).RenceAlert.toast(opts, text, type);
     }
   },
 

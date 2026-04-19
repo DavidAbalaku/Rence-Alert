@@ -184,7 +184,7 @@ export default function Home() {
               Try me!
             </button>
             <CodeBlock 
-              id="ex5" 
+              id="ex5-adv" 
               code={`RenceAlert.fire({\n  title: 'Custom Style!',\n  text: 'Custom width and colors.',\n  icon: 'success',\n  width: '600px',\n  confirmButtonColor: '#00BFA5',\n  iconColor: '#00BFA5',\n  background: '#f0fdfa'\n});`} 
             />
           </div>
