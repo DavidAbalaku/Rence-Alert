@@ -191,24 +191,43 @@ export default function Home() {
 
           {/* Example 6: Toast Notifications */}
           <div>
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">Non-blocking Toast Notifications (Material 3 Snackbar)</h3>
-            <div className="flex gap-4">
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Advanced Toast Notifications</h3>
+            <p className="text-gray-600 mb-4 text-sm">Toasts now support multiple positions, timers, and progress indicators.</p>
+            <div className="flex flex-wrap gap-4">
               <button 
-                onClick={() => RenceAlert.toast("Signed In", "Signed in successfully", "success")}
-                className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#4CAF50] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+                onClick={() => RenceAlert.toast({ title: "Top Right", text: "Default position", type: "success" })}
+                className="px-4 py-2 rounded border border-gray-200 hover:bg-gray-50 text-sm font-medium"
               >
-                Success Toast
+                Top Right
               </button>
               <button 
-                onClick={() => RenceAlert.toast("Network Error", "Unable to connect", "error")}
-                className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#F44336] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+                onClick={() => RenceAlert.toast({ title: "Bottom Left", text: "Custom position", type: "info", position: "bottom-left" })}
+                className="px-4 py-2 rounded border border-gray-200 hover:bg-gray-50 text-sm font-medium"
               >
-                Error Toast
+                Bottom Left
+              </button>
+              <button 
+                onClick={() => RenceAlert.toast({ title: "Top Center", text: "Attention grabber", type: "warning", position: "top-center" })}
+                className="px-4 py-2 rounded border border-gray-200 hover:bg-gray-50 text-sm font-medium"
+              >
+                Top Center
+              </button>
+              <button 
+                onClick={() => RenceAlert.toast({ 
+                  title: "Fast Toast", 
+                  text: "Closes in 1s", 
+                  type: "error", 
+                  timer: 1000,
+                  position: "bottom-center" 
+                })}
+                className="px-4 py-2 rounded border border-gray-200 hover:bg-gray-50 text-sm font-medium"
+              >
+                Bottom Center (1s)
               </button>
             </div>
             <CodeBlock 
-              id="ex5" 
-              code={`// Fire a simple Material Design toast on the top right\nRenceAlert.toast("Signed In", "Signed in successfully", "success");\nRenceAlert.toast("Network Error", "Unable to connect", "error");`} 
+              id="ex-toast-adv" 
+              code={`// Object based configuration\nRenceAlert.toast({\n  title: "Top Center",\n  text: "Attention grabber",\n  type: "warning",\n  position: "top-center",\n  timer: 3000,\n  showProgressBar: true\n});`} 
             />
           </div>
 
@@ -224,6 +243,25 @@ export default function Home() {
             <CodeBlock 
               id="ex7" 
               code={`// Fire a premium Material Design snackbar\nRenceAlert.snackbar("Action successful", "RETRY");`} 
+            />
+          </div>
+
+          {/* Example: Modern Linear Loading Progress */}
+          <div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Modern Linear Loading Indicator</h3>
+            <p className="text-gray-600 mb-4 text-sm">Perfect for simulated sign-in or data fetching states at the top of the viewport.</p>
+            <button 
+              onClick={() => {
+                RenceAlert.showLoading();
+                setTimeout(() => RenceAlert.hideLoading(), 3000);
+              }}
+              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-indigo-50 font-medium text-[#6750A4] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+            >
+              Try Loading (3s)
+            </button>
+            <CodeBlock 
+              id="ex-loading" 
+              code={`// Show thin indeterminate progress bar at the top\nRenceAlert.showLoading();\n\n// Hide it when task is complete\nRenceAlert.hideLoading();`} 
             />
           </div>
 

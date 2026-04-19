@@ -50,5 +50,17 @@ export const RenceAlert = {
     if (typeof window !== 'undefined' && (window as any).RenceAlert) {
       return (window as any).RenceAlert.fire(options);
     }
+  },
+
+  showLoading: () => {
+    if (typeof window !== 'undefined' && (window as any).RenceAlert) {
+      (window as any).RenceAlert.showLoading();
+    }
+  },
+
+  hideLoading: () => {
+    if (typeof window !== 'undefined' && (window as any).RenceAlert) {
+      (window as any).RenceAlert.hideLoading();
+    }
   }
 };
