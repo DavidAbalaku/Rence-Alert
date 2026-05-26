@@ -46,12 +46,12 @@ export default function Home() {
   );
 
   return (
-    <div className="min-h-screen bg-white text-[#333] font-sans selection:bg-[#6750A4] selection:text-white flex flex-col md:flex-row">
+    <div className="min-h-screen bg-white text-[#333] font-sans selection:bg-[#1a73e8] selection:text-white flex flex-col md:flex-row">
       
       {/* Mobile Header */}
       <div className="md:hidden flex items-center justify-between p-4 bg-white border-b sticky top-0 z-50">
-        <h2 className="text-xl font-black text-[#6750A4]">Rence Alert</h2>
-        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-[#6750A4]">
+        <h2 className="text-xl font-black text-[#1a73e8]">Rence Alert</h2>
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-[#1a73e8]">
           {isMenuOpen ? <X /> : <Menu />}
         </button>
       </div>
@@ -63,12 +63,12 @@ export default function Home() {
         ${isMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
         md:block overflow-y-auto
       `}>
-        <h2 className="text-2xl font-black text-[#6750A4] mb-8 tracking-tight hidden md:block">Rence Alert</h2>
+        <h2 className="text-2xl font-black text-[#1a73e8] mb-8 tracking-tight hidden md:block">Rence Alert</h2>
         <nav className="flex flex-col gap-6 md:gap-4 text-[17px] md:text-[15px] font-medium text-gray-600">
-          <a href="#examples" onClick={() => setIsMenuOpen(false)} className="hover:text-[#6750A4] transition-colors">Examples</a>
-          <a href="#download" onClick={() => setIsMenuOpen(false)} className="hover:text-[#6750A4] transition-colors">Download & Install</a>
-          <a href="#usage" onClick={() => setIsMenuOpen(false)} className="hover:text-[#6750A4] transition-colors">Usage</a>
-          <a href="#configuration" onClick={() => setIsMenuOpen(false)} className="hover:text-[#6750A4] transition-colors">Configuration Params</a>
+          <a href="#examples" onClick={() => setIsMenuOpen(false)} className="hover:text-[#1a73e8] transition-colors">Examples</a>
+          <a href="#download" onClick={() => setIsMenuOpen(false)} className="hover:text-[#1a73e8] transition-colors">Download & Install</a>
+          <a href="#usage" onClick={() => setIsMenuOpen(false)} className="hover:text-[#1a73e8] transition-colors">Usage</a>
+          <a href="#configuration" onClick={() => setIsMenuOpen(false)} className="hover:text-[#1a73e8] transition-colors">Configuration Params</a>
         </nav>
       </aside>
 
@@ -76,7 +76,7 @@ export default function Home() {
       <main className="flex-1 md:ml-64">
       {/* Header aligned like SweetAlert */}
       <header className="max-w-4xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-5xl md:text-6xl font-black text-[#6750A4] mb-4 tracking-tight drop-shadow-sm">
+        <h1 className="text-5xl md:text-6xl font-black text-[#1a73e8] mb-4 tracking-tight drop-shadow-sm">
           Rence Alert
         </h1>
         <p className="text-gray-500 font-medium mb-6">Current version: v1.0.0</p>
@@ -97,7 +97,7 @@ export default function Home() {
             <h3 className="text-xl font-semibold mb-3 text-gray-800">A basic success message</h3>
             <button 
               onClick={() => RenceAlert.success("Good job!", "You clicked the button!")}
-              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#6750A4] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#1a73e8] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
             >
               Try me!
             </button>
@@ -112,7 +112,7 @@ export default function Home() {
             <h3 className="text-xl font-semibold mb-3 text-gray-800">A title with a text under</h3>
             <button 
               onClick={() => RenceAlert.info("The Internet?", "That thing is still around?")}
-              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#6750A4] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#1a73e8] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
             >
               Try me!
             </button>
@@ -127,7 +127,7 @@ export default function Home() {
             <h3 className="text-xl font-semibold mb-3 text-gray-800">A modal with a title, an error icon, and a text</h3>
             <button 
               onClick={() => RenceAlert.error("Oops...", "Something went wrong!")}
-              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#6750A4] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#1a73e8] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
             >
               Try me!
             </button>
@@ -155,7 +155,7 @@ export default function Home() {
                   RenceAlert.error("Cancelled", "Your imaginary file is safe :)");
                 }
               })}
-              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#6750A4] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#1a73e8] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
             >
               Try me!
             </button>
@@ -255,7 +255,7 @@ export default function Home() {
                 RenceAlert.showLoading();
                 setTimeout(() => RenceAlert.hideLoading(), 3000);
               }}
-              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-indigo-50 font-medium text-[#6750A4] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-indigo-50 font-medium text-[#1a73e8] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
             >
               Try Loading (3s)
             </button>
@@ -270,7 +270,7 @@ export default function Home() {
             <h3 className="text-xl font-semibold mb-3 text-gray-800">Question / Confirmation Dialog</h3>
             <button 
               onClick={() => RenceAlert.question("Are you sure?", "This will permanently delete the item.")}
-              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#6750A4] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
+              className="px-6 py-2.5 rounded shadow-[0_2px_5px_rgba(0,0,0,0.15)] bg-white border border-gray-200 hover:bg-gray-50 font-medium text-[#1a73e8] transition-all hover:shadow-[0_4px_10px_rgba(0,0,0,0.1)] active:scale-95"
             >
               Try Question
             </button>
@@ -333,32 +333,32 @@ export default function Home() {
             </thead>
             <tbody className="divide-y divide-gray-100">
               <tr className="hover:bg-gray-50">
-                <td className="px-6 py-4 font-mono text-[#6750A4] font-semibold">title</td>
+                <td className="px-6 py-4 font-mono text-[#1a73e8] font-semibold">title</td>
                 <td className="px-6 py-4 font-mono text-gray-500">''</td>
                 <td className="px-6 py-4">The main heading of the popup.</td>
               </tr>
               <tr className="hover:bg-gray-50">
-                <td className="px-6 py-4 font-mono text-[#6750A4] font-semibold">text</td>
+                <td className="px-6 py-4 font-mono text-[#1a73e8] font-semibold">text</td>
                 <td className="px-6 py-4 font-mono text-gray-500">''</td>
                 <td className="px-6 py-4">The secondary body description under the title.</td>
               </tr>
               <tr className="hover:bg-gray-50">
-                <td className="px-6 py-4 font-mono text-[#6750A4] font-semibold">icon</td>
+                <td className="px-6 py-4 font-mono text-[#1a73e8] font-semibold">icon</td>
                 <td className="px-6 py-4 font-mono text-gray-500">'info'</td>
                 <td className="px-6 py-4">Select the Material animated icon. Valid options: <code className="bg-gray-100 px-1 rounded">'success'</code>, <code className="bg-gray-100 px-1 rounded">'error'</code>, <code className="bg-gray-100 px-1 rounded">'warning'</code>, <code className="bg-gray-100 px-1 rounded">'info'</code>.</td>
               </tr>
               <tr className="hover:bg-gray-50">
-                <td className="px-6 py-4 font-mono text-[#6750A4] font-semibold">confirmButtonText</td>
+                <td className="px-6 py-4 font-mono text-[#1a73e8] font-semibold">confirmButtonText</td>
                 <td className="px-6 py-4 font-mono text-gray-500">'OK'</td>
                 <td className="px-6 py-4">Change the text of the main positive action button.</td>
               </tr>
               <tr className="hover:bg-gray-50">
-                <td className="px-6 py-4 font-mono text-[#6750A4] font-semibold">showCancelButton</td>
+                <td className="px-6 py-4 font-mono text-[#1a73e8] font-semibold">showCancelButton</td>
                 <td className="px-6 py-4 font-mono text-gray-500">false</td>
                 <td className="px-6 py-4">Set to <code className="bg-gray-100 px-1 rounded">true</code> to display a dismissive cancel button.</td>
               </tr>
               <tr className="hover:bg-gray-50">
-                <td className="px-6 py-4 font-mono text-[#6750A4] font-semibold">cancelButtonText</td>
+                <td className="px-6 py-4 font-mono text-[#1a73e8] font-semibold">cancelButtonText</td>
                 <td className="px-6 py-4 font-mono text-gray-500">'Cancel'</td>
                 <td className="px-6 py-4">Change the text of the cancel button (only visible if <code className="bg-gray-100 px-1 rounded">showCancelButton</code> is true).</td>
               </tr>
@@ -371,9 +371,9 @@ export default function Home() {
           <p className="font-medium text-gray-600 mb-2">Designed and Built by <strong>David Abalaku</strong>.</p>
           <p className="text-sm">A beautiful, zero-dependency alternative for developers globally.</p>
           <div className="mt-6 inline-flex gap-4 items-center">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6750A4]"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1a73e8]"></span>
             <span className="text-sm font-semibold tracking-wider uppercase text-gray-400">Rence Alert v1.0.0</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6750A4]"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1a73e8]"></span>
           </div>
         </footer>
 

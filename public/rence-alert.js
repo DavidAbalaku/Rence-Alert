@@ -20,7 +20,7 @@ const RenceAlert = (() => {
         width: '420px',
         background: '#ffffff',
         iconColor: '',
-        confirmButtonColor: '#6750A4',
+        confirmButtonColor: '#1a73e8',
         cancelButtonColor: '#f1f3f5',
         confirmButtonText: 'OK',
         showCancelButton: false,

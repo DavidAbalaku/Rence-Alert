@@ -46,10 +46,12 @@ export const RenceAlert = {
     }
   },
   
-  fire: (options: any) => {
+  fire: (options: any): Promise<{ isConfirmed: boolean; isDismissed: boolean }> => {
     if (typeof window !== 'undefined' && (window as any).RenceAlert) {
       return (window as any).RenceAlert.fire(options);
     }
+    // Script not loaded yet — return a safe resolved Promise so .then() never crashes
+    return Promise.resolve({ isConfirmed: false, isDismissed: true });
   },
 
   showLoading: () => {

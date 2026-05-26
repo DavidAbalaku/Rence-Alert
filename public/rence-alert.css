@@ -1,6 +1,6 @@
 /* Rence Alert - Authentic Material Design 3 Styles */
 :root {
-  --md-sys-color-primary: #6750A4;
+  --md-sys-color-primary: #1a73e8;
   --md-sys-color-surface: #FFFFFF;
   --md-sys-color-on-surface: #1D1B20;
   --md-sys-color-on-surface-variant: #49454F;
@@ -62,7 +62,7 @@
 .rence-icon-error { color: #F44336; border-color: rgba(244, 67, 54, 0.2); background: rgba(244, 67, 54, 0.05); }
 .rence-icon-warning { color: #FF9800; border-color: rgba(255, 152, 0, 0.2); background: rgba(255, 152, 0, 0.05); }
 .rence-icon-info { color: #2196F3; border-color: rgba(33, 150, 243, 0.2); background: rgba(33, 150, 243, 0.05); }
-.rence-icon-question { color: #6750A4; border-color: rgba(103, 80, 164, 0.2); background: rgba(103, 80, 164, 0.05); }
+.rence-icon-question { color: #1a73e8; border-color: rgba(26, 115, 232, 0.2); background: rgba(26, 115, 232, 0.05); }
 
 .rence-title { font-size: 1.55rem; font-weight: 700; margin-bottom: 12px; color: var(--md-sys-color-on-surface); }
 .rence-text { font-size: 1.05rem; color: var(--md-sys-color-on-surface-variant); line-height: 1.6; margin-bottom: 36px; padding: 0 10px; }
@@ -73,9 +73,9 @@
   padding: 12px 32px; border-radius: 100px; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;
   cursor: pointer; transition: all 0.2s cubic-bezier(0.2, 0, 0, 1); border: none; outline: none;
 }
-.rence-btn-confirm { background-color: var(--md-sys-color-primary); color: #fff; box-shadow: 0px 4px 8px rgba(103, 80, 164, 0.25); }
-.rence-btn-confirm:hover { background-color: #57408f; box-shadow: 0px 6px 14px rgba(103, 80, 164, 0.35); transform: translateY(-1px); }
-.rence-btn-confirm:active { transform: scale(0.98); background-color: #46307a; }
+.rence-btn-confirm { background-color: var(--md-sys-color-primary); color: #fff; box-shadow: 0px 4px 8px rgba(26, 115, 232, 0.25); }
+.rence-btn-confirm:hover { background-color: #1557b0; box-shadow: 0px 6px 14px rgba(26, 115, 232, 0.35); transform: translateY(-1px); }
+.rence-btn-confirm:active { transform: scale(0.98); background-color: #11458b; }
 
 .rence-btn-cancel { background-color: #f1f3f5; color: #495057; }
 .rence-btn-cancel:hover { background-color: #e9ecef; transform: translateY(-1px); }
@@ -103,7 +103,7 @@
 }
 .rence-snackbar.visible { transform: translateX(-50%) translateY(0); }
 .rence-snackbar button { 
-  background: none; border: none; color: #D0BCFF; text-transform: uppercase; 
+  background: none; border: none; color: #8ab4f8; text-transform: uppercase; 
   font-weight: bold; cursor: pointer; padding: 0; font-size: 0.85rem; letter-spacing: 1.2px;
 }
 @media (max-width: 480px) {
